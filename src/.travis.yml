@@ -1,0 +1,32 @@
+language: node_js
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+
+node_js:
+  - '14'
+
+git:
+  depth: 3
+
+script:
+  - yarn test
+
+notifications:
+  email:
+    recipients:
+      - haroldadrian@gmail.com
+      - habolanos@e11evenn.com
+    on_success: always
+    on_failure: always
+
+deploy:
+  provider: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: 1e1096b2-f9d9-4eb2-a39f-7e3370430684
+  app: platzi-store-backend-habr
+  on:
+    repo: habolanos/platzi-store-backend
