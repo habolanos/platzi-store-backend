@@ -26,7 +26,7 @@ deploy:
   provider: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: 1e1096b2-f9d9-4eb2-a39f-7e3370430684
+  api_key: $HEROKU_API_KEY
   app: platzi-store-backend-habr
   on:
     repo: habolanos/platzi-store-backend
